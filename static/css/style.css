@@ -1,0 +1,169 @@
+/* ===== BODY ===== */
+body {
+    margin: 0;
+    background: #000;
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+}
+
+/* ===== WHITE OUTER BORDER ===== */
+.outer-border {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.outer-border::before {
+    content: "";
+    position: absolute;
+    width: 92%;
+    height: 90%;
+    border: 8px solid white;
+    border-radius: 40px;
+    pointer-events: none;
+}
+
+/* ===== INNER CARD ===== */
+.inner-card {
+    width: 1200px;
+    height: 650px;
+    background: #0a0a0a;
+    border-radius: 30px;
+    display: flex;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+/* ===== LEFT ===== */
+.left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #3b82f6;
+}
+
+.left h1 {
+    font-size: 60px;
+    margin: 0;
+    line-height: 1.1;
+}
+
+.left p {
+    margin-top: 20px;
+    color: #aaa;
+    max-width: 420px;
+}
+
+/* ===== BUTTONS ===== */
+.buttons {
+    margin-top: 30px;
+}
+
+button {
+    background: white;
+    color: black;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255,255,255,0.3);
+}
+
+/* ===== RIGHT SIDE ===== */
+.right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* ===== PREDICTION ABOVE IMAGE ===== */
+.prediction-box {
+    font-size: 22px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* ===== PREVIEW CONTAINER ===== */
+.preview-container {
+    width: 380px;
+    height: 450px;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.preview-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+    display: none;   /* IMPORTANT */
+}
+
+/* ===== PLACEHOLDER ===== */
+.placeholder {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    border: 2px dashed #555;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #777;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ===== MEDIA ELEMENTS ===== */
+video,
+canvas,
+.preview-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+    display: none;
+}
+
+/* ===== CLEAR BUTTON ===== */
+.clear-btn {
+    margin-top: 45px;   /* Lowered more */
+    background: white;
+    color: black;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 50px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.clear-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255,255,255,0.3);
+}

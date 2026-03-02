@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Gender Classification</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_detection/face_detection.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<div class="outer-border">
+<div class="inner-card">
+
+<!-- LEFT SIDE -->
+<div class="left">
+    <div class="logo">AI Gender</div>
+
+    <h1>AI Gender<br>Classification</h1>
+
+    <p>
+        Advanced deep learning model for real-time gender detection.
+        Accurate, fast and intelligent classification powered by AI.
+    </p>
+
+    <!-- BUTTONS -->
+    <div class="buttons">
+        <button type="button" onclick="startCamera()">Start Camera</button>
+        <button type="button" onclick="capture()">Capture & Predict</button>
+        <button type="button" onclick="stopCamera()">Stop Camera</button>
+    </div>
+
+    <!-- UPLOAD -->
+    <div class="upload-section">
+        <form action="/predict_upload" method="POST" enctype="multipart/form-data">
+            <input type="file" name="image" required>
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</div>
+
+<!-- RIGHT SIDE -->
+<div class="right">
+
+    <div id="prediction-text" class="prediction-box">
+        {% if prediction %}
+            {{ prediction }} ({{ confidence }}%)
+        {% endif %}
+    </div>
+
+    <div class="preview-container">
+
+        <div id="placeholder-box" class="placeholder">
+            Image or Camera Preview Will Appear Here
+        </div>
+
+    <img id="uploaded-img"
+         class="preview-img"
+         {% if uploaded_image %}
+            src="{{ url_for('static', filename='upload/' + uploaded_image) }}"
+         {% else %}
+            style="display:none;"
+         {% endif %}>
+
+    <video id="video" autoplay></video>
+    <canvas id="canvas"></canvas>
+    
+    </div>
+
+    <button class="clear-btn" onclick="clearAll()">Clear</button>
+
+</div>
+
+</div>
+</div>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>

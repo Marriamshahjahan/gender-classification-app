@@ -1,0 +1,6 @@
+Flask==2.2.5
+gunicorn
+tensorflow==2.12.0
+numpy==1.23.5
+opencv-python-headless
+huggingface_hub
