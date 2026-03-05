@@ -76,30 +76,26 @@ The model will be **automatically downloaded from Hugging Face and cached locall
 ## 📂 Project Structure
 
 ```
-## 📂 Project Structure
+## 📁 Project Structure
 
-```
-gender-classification-app/
-│
+```gender-classification-app/
 ├── static/
 │   ├── css/
 │   │   └── style.css
-│   │
 │   ├── js/
 │   │   └── script.js
-│   │
-│   └── upload/              # Uploaded images stored here
+│   └── upload/          # Uploaded images stored here
 │
 ├── templates/
-│   └── index.html           # Main web page
+│   └── index.html       # Main web page
 │
-├── app.py                   # Flask application
+├── app.py               # Flask application
 ├── xception_v5_03_0.939.h5  # Deep learning model (CNN - Xception)
-├── requirements.txt         # Python dependencies
-├── Procfile                 # Deployment configuration
-├── runtime.txt              # Python runtime version
-└── .gitignore               # Files ignored by Git
+├── requirements.txt     # Python dependencies
+├── Procfile             # Deployment configuration
+└── runtime.txt          # Python runtime version
 ```
+
 
 ---
 
