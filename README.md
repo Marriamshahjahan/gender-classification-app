@@ -48,7 +48,7 @@ The trained deep learning model used in this project is hosted on **Hugging Face
 Instead of storing the large model file in this repository, it is **automatically downloaded at runtime** using the `huggingface_hub` library.
 
 Model repository:
-https://huggingface.co/marriam-003/gender-classification
+https://huggingface.co/marriam-003/gender-classification/tree/main
 
 ### Model Details
 
