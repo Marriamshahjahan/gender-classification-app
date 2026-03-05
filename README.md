@@ -181,7 +181,11 @@ http://127.0.0.1:5000/
 ## 📊 Example Output
 
 ```
-Predicted Probability: 0.85
+## 📊 Example Output
+
+![Male](Screenshot%202026-03-05%20200143.png)
+
+![Female](Screenshot%202026-03-05%20200216.png)
 ```
 
 ---
