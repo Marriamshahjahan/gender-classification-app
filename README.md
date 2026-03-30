@@ -34,7 +34,7 @@ Users can enter input values through a web interface, and the system processes t
 1. The user enters input values in the web form.
 2. The data is sent to the Flask backend.
 3. The backend converts the inputs into a numerical array.
-4. The trained machine learning model (`model.pkl`) processes the data.
+4. The trained deep learning model (`gender_classification.h5`) processes the data.
 5. The predicted probability of the gender is returned and displayed.
 
 ---
