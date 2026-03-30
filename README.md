@@ -64,7 +64,7 @@ import tensorflow as tf
 
 model_path = hf_hub_download(
     repo_id="marriam-003/gender-classification",
-    filename="xception_v5_03_0.939.h5"
+    filename="gender_classification.h5"
 )
 
 model = tf.keras.models.load_model(model_path)
@@ -90,7 +90,7 @@ The model will be **automatically downloaded from Hugging Face and cached locall
 │   └── index.html       # Main web page
 │
 ├── app.py               # Flask application
-├── xception_v5_03_0.939.h5  # Deep learning model (CNN - Xception)
+├── gender_classification.h5  # Deep learning model (CNN - Xception)
 ├── requirements.txt     # Python dependencies
 ├── Procfile             # Deployment configuration
 └── runtime.txt          # Python runtime version
