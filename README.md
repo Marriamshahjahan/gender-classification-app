@@ -53,7 +53,7 @@ https://huggingface.co/marriam-003/gender-classification/tree/main
 ### Model Details
 
 * Model Architecture: **Xception CNN**
-* File Name: `xception_v5_03_0.939.h5`
+* File Name: `gender_classification.h5`
 * Framework: **TensorFlow / Keras**
 
 ### How the Model is Loaded
